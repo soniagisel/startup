@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Topic 1</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+	</head>
+
+	<body>
+		<p id="welcome">Leave a Message!</p>
+
+		<section class="section">
+
+			<form class="form" action="http://bootcamp.aws.af.cm/welcome/" method="post">
+				<p class="inputName">Name</p>
+				<input class="alias" name="alias" type="text" placeholder="Introduce your username">
+				<p class="inputName">Message</p>
+				<textarea class="message" name="message" placeholder="Write your message here"></textarea>
+				<div class="btn-cont">
+					<button type="submit" name="submit" class="button">Send</button>
+				</div>
+				<input type="hidden" name="hidden" value="Hello World!">
+			</form>
+		</section>
+
+		<section id="tweets">
+		</section>
+		
+		<script type="text/javascript" src="libs/jquery-1.11.1.js"></script>
+		<script type="text/javascript" src="js/scripts.js"></script>
+	</body>
+</html>
