@@ -46,10 +46,9 @@ table {
 
 /**** MY STYLES ****/
 
-body {
+#main {
 	width: 60%;
-	margin-left: 20%;
-	margin-right: 20%;
+	margin: 0 auto;
 
 }
 
@@ -193,9 +192,18 @@ ul li {
 
 @media only screen and (max-width: 600px) {
 
-	body {
+	#main {
 		margin: 0 auto;
 		width: 90%;
+	}
+
+}
+
+@media only screen and (max-width: 320px) {
+
+	#main {
+		margin: 0 auto;
+		width: 100%;
 	}
 
 }
