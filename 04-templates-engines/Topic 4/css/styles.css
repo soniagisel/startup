@@ -1,0 +1,201 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/**** MY STYLES ****/
+
+body {
+	width: 60%;
+	margin-left: 20%;
+	margin-right: 20%;
+
+}
+
+.clearfix {
+	clear: both;
+}
+
+.maindata {
+	width: 100%;
+	height: 250px;
+}
+
+img {
+	width: 20%;
+	float: left;
+	border-radius: 100%;
+}
+
+#biodata {
+	width: 60%;
+	float: left;
+	padding-left: 5%;
+	padding-top: 50px;
+	margin-right: 15%;
+}
+
+p {
+	line-height: 22px;
+}
+
+h1 {
+	font-size: 25px;
+	font-weight: bold;
+	padding-bottom: 50px;
+}
+
+h2 {
+	font-size: 25px;
+	font-weight: bold;
+
+}
+
+h3 {
+	font-size: 25px;
+	font-weight: bold;
+	text-decoration: underline;
+	margin: 2% 3px;
+}
+
+h4 {
+	font-weight: bold;
+}
+
+ul {
+	list-style: disc;
+} 
+
+ul li {
+	margin-bottom: 5px;
+	margin-left: 2%;
+}
+
+.job_info {
+	margin-bottom: 25px;	
+}
+
+#biodata ul li {
+	list-style: none;
+}
+
+.name {
+	font-size: 30px;
+	padding: 2% 15px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+	#tabs ul li a {
+		font-size: 15px;
+	}
+
+	.maindata {
+		height: auto;
+		text-align: center;
+	}
+	.maindata img,
+	.maindata #biodata {
+		float: none;
+	}
+
+	.maindata img {
+		width: 40%;
+	}
+
+	.maindata #biodata {
+		margin: 10px 0;
+		width: 100%;
+		padding: 0;
+	}
+	.maindata #biodata h2 {
+		font-size: 20px;
+	}
+
+	.maindata #biodata p {
+		font-size: 17px;
+	}
+
+	.maindata #biodata ul li {
+		margin-left: 0;
+		font-size: 15px;
+	}
+
+	#experience h3,
+	#education h3,
+	#skills h3 {
+		font-size: 18px;
+	}
+
+	#experience h4,
+	#education h4,
+	#skills h4 {
+		font-size: 16px;
+		margin-bottom: 5px;
+	}
+
+	#experience ul li,
+	#skills ul li {
+		margin-left: 0;
+		font-size: 15px;
+	}
+
+	#experience p,
+	#education p,
+	#skills p {
+		font-size: 15px;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+
+	body {
+		margin: 0 auto;
+		width: 90%;
+	}
+
+}

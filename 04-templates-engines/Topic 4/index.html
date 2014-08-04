@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>This is my RequireJs Example</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="js/libs/jquery-ui-1.11.0.custom/jquery-ui.theme.css">
+	<link rel="stylesheet" type="text/css" href="js/libs/jquery-ui-1.11.0.custom/jquery-ui.structure.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<script type="text/javascript" data-main="js/main.js" src="js/libs/require.js"></script>
+</head>
+<body>
+	<!-- CONTENT -->
+	<div id="tabs">
+		<ul>	    
+			<li><a href="#handlerbars">Handlerbars</a></li>
+	    	<li><a href="#underscore">Underscore</a></li>
+	    	<li><a href="#dust">Dust</a></li>
+	  	</ul>
+
+		<!-- handlerbars html -->
+		<div id="handlerbars"></div>
+		<!-- underscore html -->
+		<div id="underscore"></div>
+		<!-- dust html -->
+		<div id="dust"></div>
+	</div>
+
+	<!-- TEMPLATES -->
+
+	<!-- handlebar -->
+	<script id="handlebars-template" type="text/x-handlebars-template">
+		<h1>This was made with Handlebars</h1>
+		<div class="maindata">
+			<img src="img/{{image_name}}">
+			<div id="biodata">
+				<h2>Bio Data: </h2>
+				<p class="name">Name: {{firstname}} {{familyname}}</p>
+				{{#bio_data}}				
+				<ul>
+					<li>email: {{email}}</li>
+					
+					<li>phone: {{phone}}</li>
+					
+					<li>web site: {{website}}</li>
+				</ul>
+				{{/bio_data}}
+			</div>
+		</div>
+		<div class="clearfix"></div>
+
+		{{#bio_data}}
+			<div id="experience">
+				<h3>Experience:</h3>
+				{{#experience}}
+					{{#each items}}
+					<div class="job_info">
+						<h4>Job Details</h4>
+							<ul>
+							{{#each details}}
+								<li>{{this}}</li>
+							{{/each}}
+							</ul>
+						<p>From {{from}} to {{to}}</p>
+						<p>Technology used:</p>
+						{{#technology_used}}
+							<ul>
+							{{#each tools}}
+								<li>{{this}}</li>
+							{{/each}}
+							</ul>
+						{{/technology_used}}
+					</div>
+					{{/each}}
+				{{/experience}}
+			</div>
+
+			<div id="education">
+				{{#education}}
+					<h3>Education:</h3>
+					{{#schools}}
+						<div id="info">
+							<p>{{degree}}</p>
+							<p>{{institution}}</p>
+							<p>{{graduation_year}}</p>
+						</div>
+					{{/schools}}
+				{{/education}}
+			</div>
+
+			<div id="skills">
+				{{#skills}}
+					<h3>Skills</h3>
+					{{#each details}}
+					<p>{{type}}</p>
+						{{#each items}}
+						<ul>
+							<li>{{this}}</li>
+						</ul>
+						{{/each}}
+					{{/each}}
+				{{/skills}}
+			</div>
+		{{/bio_data}}
+	</script>
+
+	<!-- underscore -->
+	<script id="underscore-template" type="text/template">
+		<h1>This was made with Handlebars</h1>
+		<div class="maindata">
+			<img src="img/<%=image_name%>">
+		
+			<div id="biodata">
+				<h2>Bio Data: </h2>
+				<p class="name">Name: <%=firstname%> <%=familyname%></p>
+				<ul>
+					<li>email: <%=bio_data.email%></li>
+					
+					<li>phone: <%=bio_data.phone%></li>
+					
+					<li>web site: <%=bio_data.website%></li>
+				</ul>
+			</div>			
+		</div>
+
+		<div class="clearfix"></div>
+
+
+		<div id="experience">
+			<h3>Experience:</h3>
+				<% _.each(bio_data.experience.items, function(item) { %>
+					<div class="job_info">
+						<h4>Job Details</h4>
+							<ul>
+								<% _.each(item.details, function(detail) { %>
+									<li><%= detail %></li>
+								<% }) %>
+							</ul>
+						<p>From <%=item.from%> to <%=item.to%></p>
+						
+						<p>Technology used:</p>
+
+						<% _.each(item.technology_used.tools, function(tool) { %>
+							<ul>
+								<li><%=tool%></li>
+							</ul>
+						<% }) %>
+					</div>
+				<% }) %>
+		</div>
+
+		<div id="education">
+			<h3>Education:</h3>
+				<% _.each(bio_data.education.schools, function(school) { %>
+					<div id="info">
+						<p><%=school.degree%></p>
+						<p><%=school.institution%></p>
+						<p><%=school.graduation_year%></p>
+					</div>
+				<% }) %>
+		</div>
+
+		<div id="skills">
+				<h3>Skills</h3>
+				<% _.each(bio_data.skills.details, function(skill) { %>
+					<p><%=skill.type%></p>
+						<% _.each(skill.items,function(item) { %>
+							<ul>
+								<li><%=item%></li>
+							</ul>
+						<% }) %>
+				<% }) %>
+		</div>
+
+	</script>
+
+
+<!-- dust -->
+	<script id="dust-template" type="text/template">
+		<h1>This was made with Dust</h1>
+		<div class="maindata">
+			<img src="img/{image_name}">
+		
+			<div id="biodata">
+				<h2>Bio Data: </h2>
+				<p class="name">Name: {firstname} {familyname}</p>
+				<ul>
+					<li>email: {bio_data.email}</li>
+					
+					<li>phone: {bio_data.phone}</li>
+					
+					<li>web site: {bio_data.website}</li>
+				</ul>
+			</div>			
+		</div>
+		<div class="clearfix"></div>
+
+
+		<div id="experience">
+			<h3>Experience:</h3>
+			{#bio_data.experience.items}
+				<div class="job_info">
+					<h4>Job Details</h4>
+					<ul>
+						{#details}
+							<li>{.}</li>
+						{/details}
+					</ul>
+					<p>From {from} to {to}</p>
+					
+					<p>Technology used:</p>
+
+					{#technology_used.tools}
+						<ul>
+							<li>{.}</li>
+						</ul>
+					{/technology_used.tools}
+				</div>
+			{/bio_data.experience.items}
+		</div>
+
+		<div id="education">
+			<h3>Education:</h3>
+				{#bio_data.education.schools}
+					<div id="info">
+						<p>{degree}</p>
+						<p>{institution}</p>
+						<p>{school.graduation_year}</p>
+					</div>
+				{/bio_data.education.schools}
+		</div>
+
+		<div id="skills">
+				<h3>Skills</h3>
+				{#bio_data.skills.details}
+					<p>{type}</p>
+						{#items}
+							<ul>
+								<li>{.}</li>
+							</ul>
+						{/items}
+				{/bio_data.skills.details}
+		</div>
+
+	</script>
+
+
+</body>
+</html>
