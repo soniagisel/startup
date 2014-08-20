@@ -1,0 +1,210 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*************   MY STYLES   *************/
+
+body {
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box;    
+	box-sizing: border-box; 
+	text-align: left; 
+	font-family: sans-serif;
+	margin: 30px 10%;       
+}
+
+/* Prevent the text contents of draggable elements from being selectable. */
+[draggable] {
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+	/* Required to make elements draggable in old WebKit */
+	-khtml-user-drag: element;
+	-webkit-user-drag: element;
+}
+
+#text-content {
+	width: 45%;
+	background-color: #F7E2A3;
+	border-radius: 5px;
+	float: left;
+}
+
+h1 {
+	font-size: 30px;
+	text-align: center;
+	font-family: sans-serif;
+	padding: 5%;
+	color: #458FC4;
+}
+
+#textarea {
+	width: 69%;
+	margin-left: 15%;
+	margin-right: 15%;
+	height: 100px;
+}
+
+#buttons {
+	margin-right: 20%;
+	margin-left: 20%;
+}
+
+button {
+	padding: 3%;
+	margin: 10px 7%;
+	width: 35%;
+	color: #ffffff;
+}
+
+#submit {
+	background-color: #77B2D9;
+}
+
+#delete {
+	background-color: #E6AC93;
+}
+
+#drop {
+	background-color: #ffffff;
+	width: 42%;
+	border-radius: 5px;
+	padding: 2%;
+	text-align: center;
+	border: solid 3px #A7CCCA;
+	float: right;
+	height: 190px;
+}
+
+#drop_info {
+	color: #808A8A;
+	font-size: 30px;
+	line-height: 165px;
+}
+
+.clearfix {
+	clear: both;
+}
+
+.box_msg {
+	background-color: #C7E9ED;
+	height: 150px;
+	margin-top: 30px;
+	width: 270px;
+	margin-left: 1%;
+	margin-right: 1%;
+	cursor: move;
+	border-top: solid 5px #64A6D1;
+	float: left;
+	/*display: none;*/
+}
+
+.msg {
+	background-color: red;
+	width: 91%;
+	height: 118px;
+	margin: 6% 12px;
+	display: inline-block;
+	overflow: scroll;
+}
+
+#dragarea {
+	background-color: #E3B78A;
+	width: 100%;
+	margin-top: 15px;
+	height: 215px;
+}
+
+.msg-appear {
+	color: #C47523;
+	display: inline-block;
+	margin: 9% 32%;
+	font-size: 30px;
+}
+
+#dd-files {
+	border: 5px dashed #D9D9D9;
+	border-radius: 10px;
+	padding: 5em 2em;
+	text-align: center;
+	width: 80%;
+}
+
+.h2 {
+	font-size: 25px;
+	margin-top: 2%;
+	margin-bottom: 1%;
+}
+
+p {
+	display: inline-block;
+	margin-top: 1%;
+	margin-bottom: 3%;
+
+}
+
+#txt-drop {
+	width: 38%;
+	float: left;
+	margin: 20px 6%;
+}
+
+#delete-zone {
+	width: 38%;
+	float: right;
+	margin: 20px 6%;
+}
+
+#delete-files {
+	border: 5px dashed red;
+	border-radius: 10px;
+	padding: 5em 2em;
+	text-align: center;
+	width: 80%;
+}
+
+#section {
+	width: 100%;
+}

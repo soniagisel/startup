@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>IndexedDB</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.8.22.min.js"></script>
+		<script type="text/javascript" src="js/dragndrop.js"></script>
+		<script type="text/javascript" src="js/scripts_indexedDB.js"></script>
+	</head>
+
+	<body>
+		<div id="text-content">
+			<h1>Write a Message</h1>
+			<form>
+				<textarea name="text" id="textarea" autofocus>
+				</textarea>
+				<div id="buttons">
+					<button id="submit">Submit</button>
+					<button id="delete">Delete</button>
+				</div>
+			</form>
+		</div>
+
+		<!-- DRAG AND DROP-->
+		<div id="drop">
+			<p id="drop_info">Drop messages here</p>
+		</div>
+		<div class="clearfix"></div>
+		<div id="dragarea">
+			<div draggable="true" class="box_msg">
+				<div class="msg"></div>
+			</div>
+		</div>
+		
+	</body>
+</html>

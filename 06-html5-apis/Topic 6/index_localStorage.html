@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>localStorage</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.8.22.min.js"></script>
+		<script type="text/javascript" src="js/dragndrop.js"></script>
+		<script type="text/javascript" src="js/scripts_localStorage.js"></script>
+	</head>
+
+	<body>
+		<div id="text-content">
+			<h1>Write a Message</h1>
+			<textarea name="text" id="textarea" autofocus>
+			</textarea>
+			<div id="buttons">
+				<button id="submit">Submit</button>
+				<button id="delete">Delete</button>
+			</div>
+		</div>
+
+		<!--DROP AREA-->
+
+		<div id="drop">
+			<p id="drop_info">Drop messages here</p>
+		</div>
+		<div class="clearfix"></div>
+
+		<!--DROP FILES AND RECYCLE BIN-->
+
+		<section id="section">
+			<div id="txt-drop">
+				<h2 class="h2">Text Files</h2>
+				<p>Drag a .txt file from your computer onto the drop target.</p>
+				<div id="dd-files">
+					Drop a .txt file here
+				</div>
+				<pre id="file-content"></pre>
+			</div>
+
+			<div id="delete-zone">
+				<h2 class="h2">Recycle Bin</h2>
+				<p>Drag something you want to delete.</p>
+				<div id="delete-files">
+					Drop trash here
+				</div>
+			</div>
+
+			<div class="clearfix"></div>
+		</section>
+
+		<!--DRAG AREA-->
+
+		<div id="dragarea">
+			<!--<div draggable="true" class="box_msg">
+				<div class="msg"></div>
+			</div>-->
+		</div>
+
+
+
+	</body>
+</html>
